@@ -2,13 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 /*
-IMP: Only one export statement per module. So comment out other exports and use only one.
+IMPORTANT: Only one export statement per module. So comment out other exports and use only one.
 */
+
+// Inline CSS
+const h1Style = {
+    color: 'red'
+};
 
 // default variables
 const display = "Hello, to Guru99 Tutorials";
-const h1tag =<h1>{display}</h1>;
-// export default h1tag;
+const h1tag =<h1 style={h1Style}>{display}</h1>;
+export default h1tag;
 
 // functions as components without props
 function Hello() {
@@ -46,4 +51,4 @@ class HelloClassWithProps extends React.Component{
     }
 }
 const comp_hello_props= <HelloClassWithProps msg="Hellow World!" />;
-export default comp_hello_props;
+// export default comp_hello_props;
